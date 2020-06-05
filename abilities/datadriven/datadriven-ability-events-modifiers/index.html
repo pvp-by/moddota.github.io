@@ -7,14 +7,14 @@
 <title data-react-helmet="true">DataDriven Ability Events &amp; Modifiers | ModDota</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="DataDriven Ability Events &amp; Modifiers | ModDota"><meta data-react-helmet="true" name="description" content="A guide that tries to cover every Ability &amp; Modifier Event of the ability_datadriven system, with examples."><meta data-react-helmet="true" property="og:description" content="A guide that tries to cover every Ability &amp; Modifier Event of the ability_datadriven system, with examples."><meta data-react-helmet="true" property="og:url" content="https://moddota.com/abilities/datadriven/datadriven-ability-events-modifiers"><link data-react-helmet="true" rel="shortcut icon" href="/images/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://moddota.com/abilities/datadriven/datadriven-ability-events-modifiers"><link rel="stylesheet" href="/styles.8da0ef93.css">
 <link rel="stylesheet" href="/main.2550cfb1.css">
 <link rel="preload" href="/styles.1ae2fd6e.js" as="script">
-<link rel="preload" href="/runtime~main.9d6fff4c.js" as="script">
-<link rel="preload" href="/main.b464052a.js" as="script">
-<link rel="preload" href="/1.6984f75e.js" as="script">
-<link rel="preload" href="/2.96d6c610.js" as="script">
-<link rel="preload" href="/75.38cfedab.js" as="script">
-<link rel="preload" href="/1be78505.5a1f44b1.js" as="script">
-<link rel="preload" href="/ec1ed54d.1a08e7fd.js" as="script">
-<link rel="preload" href="/b454f49a.74ca40f8.js" as="script">
+<link rel="preload" href="/runtime~main.0d70bde6.js" as="script">
+<link rel="preload" href="/main.d835882d.js" as="script">
+<link rel="preload" href="/1.71fa5600.js" as="script">
+<link rel="preload" href="/2.60a96798.js" as="script">
+<link rel="preload" href="/76.0e4f1dca.js" as="script">
+<link rel="preload" href="/1be78505.69040cd9.js" as="script">
+<link rel="preload" href="/ec1ed54d.e2874483.js" as="script">
+<link rel="preload" href="/b454f49a.cdbb3188.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=window.matchMedia("(prefers-color-scheme: dark)"),n=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();null!==n?t(n):e.matches&&t("dark")}()</script><div id="__docusaurus">
@@ -22,13 +22,13 @@
 </span></div><div class="token-line" style="color:#393A34"><span class="token plain">    // Ability Events</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    &quot;OnSpellStart&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    { [ACTIONS] }</span></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#393A34"><span class="token plain">    &quot;Modifiers&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    {</span></div><div class="token-line" style="color:#393A34"><span class="token plain">        &quot;modifier_custom&quot; </span></div><div class="token-line" style="color:#393A34"><span class="token plain">          {</span></div><div class="token-line" style="color:#393A34"><span class="token plain">            // Modifier Events</span></div><div class="token-line" style="color:#393A34"><span class="token plain">            &quot;OnCreated&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">            { [ACTIONS] }</span></div><div class="token-line" style="color:#393A34"><span class="token plain">        }</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    }</span></div><div class="token-line" style="color:#393A34"><span class="token plain">}</span></div></div></div></div></div><p>When the Event triggers, all the Actions defined in its block will be executed.</p><p>To test if your Event is actually happening when you expect, you can add the following Action block inside it:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#393A34;background-color:#f6f8fa"><div class="token-line" style="color:#393A34"><span class="token plain">&quot;RunScript&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">{</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    &quot;ScriptFile&quot; &quot;utilities.lua&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    &quot;Function&quot; &quot;Test&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">}</span></div></div></div></div></div><p><code>RunScript</code> is one of the most common and potent Actions you&#x27;ll use for creating complex abilities. For it to work, you need to have a Script File, in this case <em>utilities.lua</em>, inside the vscripts folder. </p><p>The Function called can have this:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-lua codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#393A34;background-color:#f6f8fa"><div class="token-line" style="color:#393A34"><span class="token plain">function Test( event )</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    print(&quot;It works!&quot;)</span></div><div class="token-line" style="color:#393A34"><span class="token plain">end</span></div></div></div></div></div><p>This will display to the Console the values passed (usually a huge table) if your event trigger is being detected correctly.</p><p>I&#x27;ll try to stay away from RunScript as the Action to not have to make this a Dota Lua API wall of text, which is to be addressed in another, more advanced tutorial.</p><hr></div></article><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/abilities/reutilizing-built-in-modifiers"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Reutilizing Built-In Modifiers</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/abilities/datadriven/all-about-the-target"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">All about the Target »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_tVyB"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction" class="table-of-contents__link">Introduction</a></li></ul></div></div></div></div></main></div></div></div>
 <script src="/styles.1ae2fd6e.js"></script>
-<script src="/runtime~main.9d6fff4c.js"></script>
-<script src="/main.b464052a.js"></script>
-<script src="/1.6984f75e.js"></script>
-<script src="/2.96d6c610.js"></script>
-<script src="/75.38cfedab.js"></script>
-<script src="/1be78505.5a1f44b1.js"></script>
-<script src="/ec1ed54d.1a08e7fd.js"></script>
-<script src="/b454f49a.74ca40f8.js"></script>
+<script src="/runtime~main.0d70bde6.js"></script>
+<script src="/main.d835882d.js"></script>
+<script src="/1.71fa5600.js"></script>
+<script src="/2.60a96798.js"></script>
+<script src="/76.0e4f1dca.js"></script>
+<script src="/1be78505.69040cd9.js"></script>
+<script src="/ec1ed54d.e2874483.js"></script>
+<script src="/b454f49a.cdbb3188.js"></script>
 </body>
 </html>
