@@ -7,13 +7,13 @@
 <link rel="search" type="application/opensearchdescription+xml" title="ModDota" href="/opensearch.xml"><title data-react-helmet="true">Unit producing buildings | ModDota</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Unit producing buildings | ModDota"><meta data-react-helmet="true" name="description" content="This is a response tutorial on @Lemon30 question thread, I&#x27;m gonna explain the scripting approaches to fully spawning units with a building, including making them controllable and defining initial orders."><meta data-react-helmet="true" property="og:description" content="This is a response tutorial on @Lemon30 question thread, I&#x27;m gonna explain the scripting approaches to fully spawning units with a building, including making them controllable and defining initial orders."><meta data-react-helmet="true" property="og:url" content="https://moddota.com/units/unit-producing-buildings"><link data-react-helmet="true" rel="shortcut icon" href="/images/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://moddota.com/units/unit-producing-buildings"><link rel="stylesheet" href="/styles.feceb74b.css">
 <link rel="stylesheet" href="/main.8db07b0a.css">
 <link rel="preload" href="/styles.cf0745e2.js" as="script">
-<link rel="preload" href="/runtime~main.82b411d8.js" as="script">
+<link rel="preload" href="/runtime~main.e03159f5.js" as="script">
 <link rel="preload" href="/main.957a4a09.js" as="script">
 <link rel="preload" href="/1.298f4e14.js" as="script">
 <link rel="preload" href="/2.4fc8d9c5.js" as="script">
 <link rel="preload" href="/1be78505.07c283b1.js" as="script">
 <link rel="preload" href="/ec1ed54d.6385b632.js" as="script">
-<link rel="preload" href="/a9d58478.4b9969bb.js" as="script">
+<link rel="preload" href="/a9d58478.6feaa435.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=window.matchMedia("(prefers-color-scheme: dark)"),n=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();null!==n?t(n):e.matches&&t("dark")}()</script><div id="__docusaurus">
@@ -25,12 +25,12 @@
 </span></div><div class="token-line" style="color:#393A34"><span class="token plain">    ExecuteOrderFromTable({ UnitIndex = target:GetEntityIndex(), </span></div><div class="token-line" style="color:#393A34"><span class="token plain">                            OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION,</span></div><div class="token-line" style="color:#393A34"><span class="token plain">                            Position = position, Queue = true })</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    print(target:GetUnitName()..&quot; moving to position&quot;,position)</span></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#393A34"><span class="token plain">    local player = caster:GetPlayerOwner()</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    local hero = player:GetAssignedHero()</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    target:SetOwner(hero)</span></div><div class="token-line" style="color:#393A34"><span class="token plain">end</span></div></div></div></div></div><hr><br>That&#x27;s it for now, post any doubts about anything below. Thanks for reading!</div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/units/unit-keyvalues"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Unit KeyValues</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/units/creating-units-with-a-duration"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Creating units with a duration »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_tVyB"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#step-1-the-npc_units_customtxt-files" class="table-of-contents__link">Step 1: The npc_units_custom.txt files</a></li><li><a href="#step-2-putting-your-unit-into-the-map" class="table-of-contents__link">Step 2: Putting your unit into the map.</a><ul><li><a href="#hammer-units" class="table-of-contents__link">Hammer Units</a></li><li><a href="#scripting-approach" class="table-of-contents__link">Scripting Approach</a></li></ul></li><li><a href="#step-3-scripting-the-unit-spawning-ability-inside-the-building" class="table-of-contents__link">Step 3: Scripting the unit-spawning ability inside the building</a><ul><li><a href="#datadriven-spawnunit" class="table-of-contents__link">DataDriven &quot;SpawnUnit&quot;</a></li></ul></li><li><a href="#orders" class="table-of-contents__link">Orders</a></li></ul></div></div></div></div></main></div></div></div>
 <script src="/styles.cf0745e2.js"></script>
-<script src="/runtime~main.82b411d8.js"></script>
+<script src="/runtime~main.e03159f5.js"></script>
 <script src="/main.957a4a09.js"></script>
 <script src="/1.298f4e14.js"></script>
 <script src="/2.4fc8d9c5.js"></script>
 <script src="/1be78505.07c283b1.js"></script>
 <script src="/ec1ed54d.6385b632.js"></script>
-<script src="/a9d58478.4b9969bb.js"></script>
+<script src="/a9d58478.6feaa435.js"></script>
 </body>
 </html>
