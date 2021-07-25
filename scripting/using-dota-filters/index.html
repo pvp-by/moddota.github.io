@@ -6,14 +6,14 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.58">
 <link rel="search" type="application/opensearchdescription+xml" title="ModDota" href="/opensearch.xml"><title data-react-helmet="true">Using the order filter and other filters | ModDota</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Using the order filter and other filters | ModDota"><meta data-react-helmet="true" name="description" content="Filters in general"><meta data-react-helmet="true" property="og:description" content="Filters in general"><meta data-react-helmet="true" property="og:url" content="https://moddota.com/scripting/using-dota-filters"><link data-react-helmet="true" rel="shortcut icon" href="/images/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://moddota.com/scripting/using-dota-filters"><link rel="stylesheet" href="/styles.feceb74b.css">
 <link rel="stylesheet" href="/main.b085bf71.css">
-<link rel="preload" href="/styles.f2ea0ba9.js" as="script">
-<link rel="preload" href="/runtime~main.3c6580f2.js" as="script">
-<link rel="preload" href="/main.5721e1fe.js" as="script">
-<link rel="preload" href="/1.d3a7b970.js" as="script">
-<link rel="preload" href="/2.c1fd6c48.js" as="script">
-<link rel="preload" href="/1be78505.4009a82a.js" as="script">
-<link rel="preload" href="/ec1ed54d.a590a71f.js" as="script">
-<link rel="preload" href="/b31d2738.1b3e38a4.js" as="script">
+<link rel="preload" href="/styles.0e4a919a.js" as="script">
+<link rel="preload" href="/runtime~main.a2fb8a44.js" as="script">
+<link rel="preload" href="/main.77edbd6d.js" as="script">
+<link rel="preload" href="/1.63f69919.js" as="script">
+<link rel="preload" href="/2.8121b150.js" as="script">
+<link rel="preload" href="/1be78505.4e0ed83a.js" as="script">
+<link rel="preload" href="/ec1ed54d.adf36bc2.js" as="script">
+<link rel="preload" href="/b31d2738.eba470f1.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=window.matchMedia("(prefers-color-scheme: dark)"),n=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();null!==n?t(n):e.matches&&t("dark")}()</script><div id="__docusaurus">
@@ -24,13 +24,13 @@
 </span></div><div class="token-line" style="color:#393A34"><span class="token plain">--......................</span></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#393A34"><span class="token plain">--Add the order filter to your game mode entity</span></div><div class="token-line" style="color:#393A34"><span class="token plain">function GameMode:OrderFilter(event)</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    --Check if the order is the glyph type</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    if event.order_type == DOTA_UNIT_ORDER_MOVE_TO_POSITION then</span></div><div class="token-line" style="color:#393A34"><span class="token plain">        local offsetVector = RandomVector(100)</span></div><div class="token-line" style="color:#393A34"><span class="token plain">        event.position_x = event.position_x + offsetVector.x</span></div><div class="token-line" style="color:#393A34"><span class="token plain">        event.position_y = event.position_y + offsetVector.y</span></div><div class="token-line" style="color:#393A34"><span class="token plain">        return true</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    end</span></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#393A34"><span class="token plain">    --Return true by default to keep all other orders the same</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    return true</span></div><div class="token-line" style="color:#393A34"><span class="token plain">end</span></div></div></div></div></div></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/scripting/lava-damage"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Lava damage</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/scripting/particle-attachment"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Particle Attachment »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_tVyB"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#filters-in-general" class="table-of-contents__link">Filters in general</a></li><li><a href="#the-general-idea" class="table-of-contents__link">The general idea</a></li><li><a href="#filters-in-lua" class="table-of-contents__link">Filters in Lua</a></li><li><a href="#example-1-disabling-glyph" class="table-of-contents__link">Example 1: Disabling glyph</a></li><li><a href="#example-2-order-modification" class="table-of-contents__link">Example 2: Order modification</a></li></ul></div></div></div></div></main></div></div></div>
-<script src="/styles.f2ea0ba9.js"></script>
-<script src="/runtime~main.3c6580f2.js"></script>
-<script src="/main.5721e1fe.js"></script>
-<script src="/1.d3a7b970.js"></script>
-<script src="/2.c1fd6c48.js"></script>
-<script src="/1be78505.4009a82a.js"></script>
-<script src="/ec1ed54d.a590a71f.js"></script>
-<script src="/b31d2738.1b3e38a4.js"></script>
+<script src="/styles.0e4a919a.js"></script>
+<script src="/runtime~main.a2fb8a44.js"></script>
+<script src="/main.77edbd6d.js"></script>
+<script src="/1.63f69919.js"></script>
+<script src="/2.8121b150.js"></script>
+<script src="/1be78505.4e0ed83a.js"></script>
+<script src="/ec1ed54d.adf36bc2.js"></script>
+<script src="/b31d2738.eba470f1.js"></script>
 </body>
 </html>

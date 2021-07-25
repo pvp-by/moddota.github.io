@@ -6,14 +6,14 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.58">
 <link rel="search" type="application/opensearchdescription+xml" title="ModDota" href="/opensearch.xml"><title data-react-helmet="true">Keybindings | ModDota</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Keybindings | ModDota"><meta data-react-helmet="true" name="description" content="Introduction"><meta data-react-helmet="true" property="og:description" content="Introduction"><meta data-react-helmet="true" property="og:url" content="https://moddota.com/panorama/keybindings"><link data-react-helmet="true" rel="shortcut icon" href="/images/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://moddota.com/panorama/keybindings"><link rel="stylesheet" href="/styles.feceb74b.css">
 <link rel="stylesheet" href="/main.b085bf71.css">
-<link rel="preload" href="/styles.f2ea0ba9.js" as="script">
-<link rel="preload" href="/runtime~main.3c6580f2.js" as="script">
-<link rel="preload" href="/main.5721e1fe.js" as="script">
-<link rel="preload" href="/1.d3a7b970.js" as="script">
-<link rel="preload" href="/2.c1fd6c48.js" as="script">
-<link rel="preload" href="/1be78505.4009a82a.js" as="script">
-<link rel="preload" href="/ec1ed54d.a590a71f.js" as="script">
-<link rel="preload" href="/fc49deb6.c26c35c6.js" as="script">
+<link rel="preload" href="/styles.0e4a919a.js" as="script">
+<link rel="preload" href="/runtime~main.a2fb8a44.js" as="script">
+<link rel="preload" href="/main.77edbd6d.js" as="script">
+<link rel="preload" href="/1.63f69919.js" as="script">
+<link rel="preload" href="/2.8121b150.js" as="script">
+<link rel="preload" href="/1be78505.4e0ed83a.js" as="script">
+<link rel="preload" href="/ec1ed54d.adf36bc2.js" as="script">
+<link rel="preload" href="/fc49deb6.98130ed8.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=window.matchMedia("(prefers-color-scheme: dark)"),n=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();null!==n?t(n):e.matches&&t("dark")}()</script><div id="__docusaurus">
@@ -25,13 +25,13 @@ Name of the command, used for debugging purposes.</p><p>####Command Prefixes</p>
 </span></div><div class="token-line" style="color:#393A34"><span class="token plain">function OnTestButtonPressed()</span></div><div class="token-line" style="color:#393A34"><span class="token plain">{</span></div><div class="token-line" style="color:#393A34"><span class="token plain">  $.Msg(&quot;&#x27;Z&#x27; Pressed&quot;);</span></div><div class="token-line" style="color:#393A34"><span class="token plain">}</span></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#393A34"><span class="token plain">function OnTestButtonReleased()</span></div><div class="token-line" style="color:#393A34"><span class="token plain">{</span></div><div class="token-line" style="color:#393A34"><span class="token plain">  $.Msg(&quot;&#x27;Z&#x27; Released&quot;);</span></div><div class="token-line" style="color:#393A34"><span class="token plain">}</span></div><div class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#393A34"><span class="token plain">(function() {</span></div><div class="token-line" style="color:#393A34"><span class="token plain">  Game.AddCommand( &quot;CustomGameExecuteAbility1&quot;, OnExecuteAbility1ButtonPressed, &quot;&quot;, 0 );</span></div><div class="token-line" style="color:#393A34"><span class="token plain">  Game.AddCommand( &quot;+CustomGameTestButton&quot;, OnTestButtonPressed, &quot;&quot;, 0 );</span></div><div class="token-line" style="color:#393A34"><span class="token plain">  Game.AddCommand( &quot;-CustomGameTestButton&quot;, OnTestButtonReleased, &quot;&quot;, 0 );</span></div><div class="token-line" style="color:#393A34"><span class="token plain">})();</span></div></div></div></div></div><p>Note how the prefixes are used again. Even though we only defined <code>CustomGameTestButton</code> to be fired on <em>key down</em>, we can easily catch the release event in our JS aswell.</p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/panorama/introduction-to-panorama-ui-with-typescript"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Introduction to Panorama UI with TypeScript</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/panorama/dotascenepanel"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">DOTAScenePanel »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_tVyB"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction" class="table-of-contents__link">Introduction</a></li><li><a href="#setup" class="table-of-contents__link">Setup</a></li><li><a href="#panorama" class="table-of-contents__link">Panorama</a></li></ul></div></div></div></div></main></div></div></div>
-<script src="/styles.f2ea0ba9.js"></script>
-<script src="/runtime~main.3c6580f2.js"></script>
-<script src="/main.5721e1fe.js"></script>
-<script src="/1.d3a7b970.js"></script>
-<script src="/2.c1fd6c48.js"></script>
-<script src="/1be78505.4009a82a.js"></script>
-<script src="/ec1ed54d.a590a71f.js"></script>
-<script src="/fc49deb6.c26c35c6.js"></script>
+<script src="/styles.0e4a919a.js"></script>
+<script src="/runtime~main.a2fb8a44.js"></script>
+<script src="/main.77edbd6d.js"></script>
+<script src="/1.63f69919.js"></script>
+<script src="/2.8121b150.js"></script>
+<script src="/1be78505.4e0ed83a.js"></script>
+<script src="/ec1ed54d.adf36bc2.js"></script>
+<script src="/fc49deb6.98130ed8.js"></script>
 </body>
 </html>

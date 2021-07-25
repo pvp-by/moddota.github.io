@@ -6,14 +6,14 @@
 <meta name="generator" content="Docusaurus v2.0.0-alpha.58">
 <link rel="search" type="application/opensearchdescription+xml" title="ModDota" href="/opensearch.xml"><title data-react-helmet="true">Making a &quot;rpg-like&quot; looting chest | ModDota</title><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Making a &quot;rpg-like&quot; looting chest | ModDota"><meta data-react-helmet="true" name="description" content="Hello , it&#x27;s the first time i&#x27;m making a tutorial here (and on lua too)"><meta data-react-helmet="true" property="og:description" content="Hello , it&#x27;s the first time i&#x27;m making a tutorial here (and on lua too)"><meta data-react-helmet="true" property="og:url" content="https://moddota.com/scripting/making-a-rpg-like-looting-chest"><link data-react-helmet="true" rel="shortcut icon" href="/images/favicon.ico"><link data-react-helmet="true" rel="canonical" href="https://moddota.com/scripting/making-a-rpg-like-looting-chest"><link rel="stylesheet" href="/styles.feceb74b.css">
 <link rel="stylesheet" href="/main.b085bf71.css">
-<link rel="preload" href="/styles.f2ea0ba9.js" as="script">
-<link rel="preload" href="/runtime~main.3c6580f2.js" as="script">
-<link rel="preload" href="/main.5721e1fe.js" as="script">
-<link rel="preload" href="/1.d3a7b970.js" as="script">
-<link rel="preload" href="/2.c1fd6c48.js" as="script">
-<link rel="preload" href="/1be78505.4009a82a.js" as="script">
-<link rel="preload" href="/ec1ed54d.a590a71f.js" as="script">
-<link rel="preload" href="/af019b7a.08bcce05.js" as="script">
+<link rel="preload" href="/styles.0e4a919a.js" as="script">
+<link rel="preload" href="/runtime~main.a2fb8a44.js" as="script">
+<link rel="preload" href="/main.77edbd6d.js" as="script">
+<link rel="preload" href="/1.63f69919.js" as="script">
+<link rel="preload" href="/2.8121b150.js" as="script">
+<link rel="preload" href="/1be78505.4e0ed83a.js" as="script">
+<link rel="preload" href="/ec1ed54d.adf36bc2.js" as="script">
+<link rel="preload" href="/af019b7a.c9e3ed7f.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=window.matchMedia("(prefers-color-scheme: dark)"),n=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();null!==n?t(n):e.matches&&t("dark")}()</script><div id="__docusaurus">
@@ -27,13 +27,13 @@ So today i&#x27;ll teach you how to make a chest you must open , and then you ca
 &quot;scripts/kv/chest_result.kv&quot;</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#393A34;background-color:#f6f8fa"><div class="token-line" style="color:#393A34"><span class="token plain">&quot;put_the_name_you_wanna&quot; </span></div><div class="token-line" style="color:#393A34"><span class="token plain">{ </span></div><div class="token-line" style="color:#393A34"><span class="token plain">    &quot;chest_1&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    { </span></div><div class="token-line" style="color:#393A34"><span class="token plain">        &quot;1&quot; &quot;item_assault&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">        &quot;2&quot; &quot;item_desolator&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">        &quot;3&quot; &quot;item_sange_and_yasha&quot;   </span></div><div class="token-line" style="color:#393A34"><span class="token plain">        &quot;4&quot; &quot;item_butterfly&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    }</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    &quot;chest_2&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    { </span></div><div class="token-line" style="color:#393A34"><span class="token plain">        &quot;1&quot; &quot;item_youritem&quot;</span></div><div class="token-line" style="color:#393A34"><span class="token plain">    }</span></div><div class="token-line" style="color:#393A34"><span class="token plain">}</span></div></div></div></div></div><p>Now you can easely make a chest for your rpg game :D
 If you want to make the chest loot on ennemy death , look this another tuto from Noya about drop system :
 <a href="https://moddota.com/forums/discussion/257/item-drop-system" target="_blank" rel="noopener noreferrer">https://moddota.com/forums/discussion/257/item-drop-system</a></p></div></article><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/scripting/item-drop-system"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Item Drop System</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/scripting/scripted-shop-spawning"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Scripted Shop Spawning »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_tVyB"></div></div></div></div></main></div></div></div>
-<script src="/styles.f2ea0ba9.js"></script>
-<script src="/runtime~main.3c6580f2.js"></script>
-<script src="/main.5721e1fe.js"></script>
-<script src="/1.d3a7b970.js"></script>
-<script src="/2.c1fd6c48.js"></script>
-<script src="/1be78505.4009a82a.js"></script>
-<script src="/ec1ed54d.a590a71f.js"></script>
-<script src="/af019b7a.08bcce05.js"></script>
+<script src="/styles.0e4a919a.js"></script>
+<script src="/runtime~main.a2fb8a44.js"></script>
+<script src="/main.77edbd6d.js"></script>
+<script src="/1.63f69919.js"></script>
+<script src="/2.8121b150.js"></script>
+<script src="/1be78505.4e0ed83a.js"></script>
+<script src="/ec1ed54d.adf36bc2.js"></script>
+<script src="/af019b7a.c9e3ed7f.js"></script>
 </body>
 </html>
