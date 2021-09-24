@@ -7,5 +7,5 @@
   <Image width="16" height="16" type="image/x-icon">https://moddota.com/images/favicon.ico</Image>
   <Url type="text/html" method="get" template="https://moddota.com/search?q={searchTerms}"/>
   <Url type="application/opensearchdescription+xml" rel="self" template="https://moddota.com/opensearch.xml" />
-  <moz:SearchForm>https://moddota.com</moz:SearchForm>
+  <moz:SearchForm>https://moddota.com/</moz:SearchForm>
 </OpenSearchDescription>
